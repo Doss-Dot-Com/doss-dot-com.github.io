@@ -1,0 +1,287 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif; /* Use Lato font */
+    background-color: #2d2d2d;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #232323;
+    color: #00a2ff;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size:19px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00a2ff;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif; /* Use Lato font */
+}
+
+p {
+    font-size: 17px; 
+}
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    line-height: 1.6;
+}
+
+.p1 {
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Code Element */
+.code-outer-container {
+    background-color: #1f1f1f;
+    border: 20px solid #00a2ff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow-x: auto;
+    text-align: left;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 5px auto;
+}
+.section {
+    margin: 20px 0;
+}
+
+.code-container {
+    background-color: #1f1f1f;
+    border: 2px solid #00a2ff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 5px;
+    position: relative;
+}
+
+.code-tab {
+    background-color: #00a2ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    border: 2px solid #00a2ff;
+    border-bottom: none;
+}
+
+.code-tab span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.html {
+    color: #5E90DE; /* Light blue for HTML tags */
+}
+
+.css {
+    color: #A3E57B; /* Light green for CSS properties */
+}
+
+code {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    margin-top: 0;
+    line-height: 1.4;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom:0px;
+    text-align: left;
+}
+
+.display {
+        background-color: #383838; /* Dark background */
+        color:white; /* White text color */
+        box-shadow: none; /* Remove the shadow */
+        line-height: 1.6;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 25px;
+}
+
+.explanation {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.visual-example {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add spacing between the visual example and text */
+    vertical-align: middle; /* Align the image vertically with text */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/*Code Element End*/
+
+/* Prism.js Code Block Styles */
+pre[class*="language-"] {
+    background-color:#383838;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white; /* White text color */
+    box-shadow: none; /* Remove the shadow */
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    overflow-x: auto; /* Make the content scrollable horizontally */
+}
+
+/* Adjust Prism.js token styles */
+.token.tag {
+    color: #5E90DE; /* Light blue for HTML tags */
+}
+
+.token.attr-name {
+    color: #d52a2a; /* Red for attribute names */
+}
+
+.token.attr-value {
+    color: #A3E57B; /* Light green for attribute values */
+}
+
+.token.class-name {
+    color: #5E90DE;
+}
+
+.token.keyword.keyword-flex {
+    color: #f92672
+}
+
+.token, .token-class, .token-punctuation {
+    background: transparent; /* Remove the gray background */
+}
+/* Additional token styles for different code elements as needed */
+
+/* Adjust line numbers background and text color */
+.line-numbers-rows {
+    background-color: #1f1f1f; /* Dark gray background */
+    color: #fff; /* White text color */
+}
+
+.code-container code {
+    text-shadow: none;
+    text-align:left;
+}
+
+
+/*Prism.js End Code */
+
+/*List Design Code */
+/* Add a class selector for your custom list */
+.custom-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    border-top: 1px solid #ddd; /* Add a faint line at the top of each list item */
+    margin-top: 20px;
+}
+
+.description {
+    padding: 10px; /* Add some spacing */
+}
+
+.list-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.list-item strong {
+    color: #5E90DE; /* Match the blue color used in your website */
+    font-weight: bold;
+}
+
+.list-item p {
+    color:white; /* Match the green color used in your website */
+    font-family: 'Lato', sans-serif; /* Use the Lato font from your website */
+    font-size: 17px; /* Match the font size used in your website */
+    line-height: 1.6;
+}
+
+.list-title {
+    font-size: 18px;
+    color:#3498db;
+}
+
+.title-and-description {
+    flex: 1; /* Expand to take available space */
+}
+
+.visuals {
+    display: flex; /* Display visuals side by side */
+    justify-content: flex-start; /* Align visuals to the right side */
+    align-items: flex-start; /* Vertically align visuals */
+    padding: 10px;
+}
+
+.visual-container {
+    text-align: center;
+    margin-right: 20px; /* Add space between visuals */
+}
+
+.visual-label {
+    text-align: center;
+    font-size: 12px;
+    margin-top: px;
+}
+
+.visuals iframe {
+    margin-right: 10px; /* Add space between visuals */
+}
+
+/*Lish Design Code end */

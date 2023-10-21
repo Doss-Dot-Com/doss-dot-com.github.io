@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.video-item {
+    width: 30%;
+    background-color: #fff;
+    margin: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.thumbnail {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+.video-length {
+    font-size: 12px;
+}
+.video-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.video-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Additional CSS for the New Sections */
+/* Featured Video Section */
+.featured-video .video-item {
+    /* Add unique styles for featured video items */
+    background-color: #ffd700; /* Example background color */
+}
+
+/* Video History Section */
+.video-history .video-item {
+    /* Add unique styles for video history items */
+    background-color: #6ac0e0; /* Example background color */
+}
+
+/* Watch Later Section */
+.watch-later .video-item {
+    /* Add unique styles for watch later items */
+    background-color: #f17e70; /* Example background color */
+}
