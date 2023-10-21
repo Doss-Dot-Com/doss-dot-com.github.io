@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doss Lab Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism-vsc-dark-plus.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <h1>Comprehensive Guide to CSS Flexbox: Positioning Data in Rows and Columns</h1>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <article>
+            <h1>Introduction</h1>
+            <p>In this comprehensive tutorial, we will delve into the world of Cascading Style Sheets (CSS) to understand how to effectively position data in rows and columns on a web page. CSS is a fundamental technology for web development that allows us to control the layout, style, and presentation of web content. One of the most common tasks in web design is organizing content in a structured grid layout, and this tutorial will guide you through the process.
+            </p>
+            <br>
+            <p><span style="font-weight: bold;">Why CSS Flexbox?</span></p>
+            <p>CSS Flexbox is a powerful layout model that simplifies complex layouts and provides a more efficient way to distribute space and align items within a container. This is essential for creating responsive and visually appealing websites.</p>
+            <br>
+            <h1>Step 1: Create an HTML Structure</h1>
+            <p>Before we dive into CSS, let's create an HTML structure that will serve as the foundation for our layout. We'll use a simple example with a list of items that we want to arrange in rows and columns. Here's a basic HTML structure:</p>
+
+            <div class="code-container">
+                <div class="code-tab">
+                    <img src="https://assets.stickpng.com/images/5847f5bdcef1014c0b5e489c.png" alt="HTML5 Logo" style="height: 40px; width: auto;">
+                </div>
+    <pre class="line-numbers"><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="item"&gt;<span style="color: white;">Item 1</span>&lt;/div&gt;
+            &lt;div class="item"&gt;<span style="color: white;">Item 2</span>&lt;/div&gt;
+            &lt;div class="item"&gt;<span style="color: white;">Item 3</span>&lt;/div&gt;
+            &lt;div class="item"&gt;<span style="color: white;">Item 4</span>&lt;/div&gt;
+            &lt;div class="item"&gt;<span style="color: white;">Item 5</span>&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+            </div>
+            <p>The output should look like something as follows: </p>
+    <pre><code class="language-html">
+    Item 1
+    Item 2
+    Item 3
+    Item 4
+    Item 5
+    </code></pre>
+            <p>In this example, we have a container div that holds five items. We'll use CSS to arrange these items in rows and columns.</p>
+            <br>
+            <h1>Step 2: CSS Flexbox for Simple Layouts</h1>
+            <p>One of the most straightforward methods to position data in rows and columns is by using CSS Flexbox. Flexbox is a layout model that provides an efficient way to distribute space and align items in a container, even when their size is unknown or dynamic.</p>
+            <br>
+            <p><span style="font-weight: bold">Creating a CSS File</span></p>
+            <p>Create a .css file to define the following CSS rules:</p>
+            <div class="code-container">
+                <div class="code-tab">
+                    <img src="https://assets.stickpng.com/thumbs/62b221ef038aad4d3ed7ca2e.png" alt="HTML5 Logo" style="height: 40px; width: auto;">
+                </div>
+    <pre><code class="language-css">
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .item {
+        width: 30%;
+        margin: 10px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        }
+    </code></pre>
+            </div>
+            <br>
+            <p>In this code, we set the container to display as a flex container and allow its items to wrap to the next line when the container's width is insufficient. We use justify-content to distribute space between the items and give them some space with margin.</p>
+            <br>
+            <h1>Step 3: View Your Page</h1>
+            <p>Now, when you open your HTML file in a web browser, you'll see your items organized in rows and columns. The flex-wrap property ensures that items wrap to the next row when there's not enough horizontal space.</p>
+            <div class="display">
+            <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Example/example.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html>
+            </div>
+            <h1>Customization</h1>
+            <ul class="custom-list">
+                <li>
+                    <div class="list-item">
+                        <div class="title-and-description">
+                            <h3 class="list-title">display: flex;</h3>
+                            <div class="description">
+                                <p>This property turns the container into a flex container, enabling the use of flexbox layout.</p>
+                            </div>
+                        </div>
+                        <div class="visuals">
+                            <div class="visual-container">
+                                <iframe src="Example/noflex.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">With no flex</div>
+                            </div>
+                            <div class="visual-container">
+                                <iframe src="Example/withflex.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">With flex</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>                
+                <br>           
+                <li>
+                    <div class="list-item">
+                        <div class="title-and-description">
+                            <h3 class="list-title">flex-wrap: wrap;</h3>
+                            <div class="description">
+                                <p>Items will wrap onto the next line if they don't fit in the container's width</p>
+                            </div>
+                        </div>
+                        <div class="visuals">
+                            <div class="visual-container">
+                                <iframe src="Example/nowrap.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">no flex-wrap</div>
+                            </div>
+                            <div class="visual-container">
+                                <iframe src="Example/withwrap.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">flex-wrap</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>  
+                <li>
+                    <div class="list-item">
+                        <div class="title-and-description">
+                            <h3 class="list-title">justify-content: space-between;</h3>
+                            <div class="description">
+                                <p>This distributes space between and around the items, creating the effect of columns.</p>
+                            </div>
+                        </div>
+                        <div class="visuals">
+                            <div class="visual-container">
+                                <iframe src="Example/justify-content2.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">justify-content: space-between;</div>
+                            </div>
+                            <div class="visual-container">
+                                <iframe src="Example/justify-content1.html" width="175" height="200" style="border-radius: 5px; border-color: #00a2ff"></iframe>
+                                <div class="visual-label">justify-content: space-around;</div>
+                            </div>
+                        </div>
+                    </div>
+            </ul>
+            <h1 style="border-top: 1px solid #ddd; padding-top:20px">Advanced Example: Creating a Film Festival Website</h1>
+            <p>To better understand the functionality of Flexbox, let's create an example of a film festival website. This example demonstrates how Flexbox can be used in a professional setting.</p>
+            <br>
+            <p>Here is a simple film festival website I created to demonstrate it's functionality in a professional setting. </p>
+            <div class="code-container">
+                <div class="code-tab">
+                    <img src="https://assets.stickpng.com/images/5847f5bdcef1014c0b5e489c.png" alt="HTML5 Logo" style="height: 40px; width: auto;">
+                </div>
+<pre class="line-numbers"><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Film Website&lt;/title&gt;
+        &lt;link rel="stylesheet" type="text/css" href="advanced-example.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;h1&gt;Film Selection&lt;/h1&gt;
+            &lt;div class="video"&gt;
+                &lt;div class="video-item"&gt;
+                    &lt;div class="thumbnail"&gt;
+                        &lt;iframe width="100%" height="200" src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+                        &lt;div class="overlay"&gt;
+                            &lt;span class="video-length"&gt;3:45&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="video-title"&gt;Video Title 1&lt;/div&gt;
+                    &lt;div class="video-description"&gt;Description of Video 1.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="video-item"&gt;
+                    &lt;div class="thumbnail"&gt;
+                        &lt;iframe width="100%" height="200" src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+                        &lt;div class="overlay"&gt;
+                            &lt;span class="video-length"&gt;3:45&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="video-title"&gt;Video Title 1&lt;/div&gt;
+                    &lt;div class="video-description"&gt;Description of Video 1.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="video-item"&gt;
+                    &lt;div class="thumbnail"&gt;
+                        &lt;iframe width="100%" height="200" src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+                        &lt;div class="overlay"&gt;
+                            &lt;span class="video-length"&gt;3:45&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="video-title"&gt;Video Title 1&lt;/div&gt;
+                    &lt;div class="video-description"&gt;Description of Video 1.&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+            </div>
+            <p>In this example, we have a container with film information displayed using Flexbox. However, the HTML structure alone doesn't specify where or how each container should be arranged. If we were to open this HTML file, you would see the video aligned vertically, one above the other.</p>
+            <br>
+            <p styles="font-weight:bold"> Styles for Advanced Example</p>
+            <p>To achieve the desired layout for our film festival website, we need to apply CSS styles. Here's the CSS code for styling our film festival website:</p>
+            <div class="code-container">
+                <div class="code-tab">
+                    <img src="https://assets.stickpng.com/thumbs/62b221ef038aad4d3ed7ca2e.png" alt="HTML5 Logo" style="height: 40px; width: auto;">
+                </div>
+    <pre><code class="language-css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video {
+            display: flex;
+            justify-content: space-between;
+        }
+        .video-item {
+            width: 30%;
+            background-color: #fff;
+            margin: 5px;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .thumbnail {
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .video-length {
+            font-size: 12px;
+        }
+        .video-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .video-description {
+            font-size: 14px;
+            color: #666;
+        }
+    </code></pre>
+            </div>
+            <p>In the .video class, you can see that we have included the display: flex style and justify-content: space-between. This layout will allow the containers classed as 'video' to have even space between each other, even if the user resizes the window.</p>
+            <br>
+            <p>The output should be looking something like this: </p>
+        <iframe src="Example/advanced-example.html" width="100%" height="400" style="border-radius: 5px; border-color: #00a2ff; display: flex"></iframe>
+        <br>
+        <p>While this design alone would be appropriate for 1 - 4 video containers, the challenge presents itself when you start adding more containers under the video class (&lt;div class="video"&gt;&lt;/div&gt;). This would only further elongate the containers, making the website harder to navigate, as shown below:</p>
+        <br>
+        <iframe src="Example/bad-example.html" width="100%" height="400" style="border-radius: 5px; border-color: #00a2ff; display: flex"></iframe>
+        <br>
+        <p>This is where flex-wrap: wrap; comes into play. In our styles.css, we will locate our .video class and add the following:</p>
+        <div class="code-container">
+            <div class="code-tab">
+                <img src="https://assets.stickpng.com/thumbs/62b221ef038aad4d3ed7ca2e.png" alt="HTML5 Logo" style="height: 40px; width: auto;">
+            </div>
+<pre><code class="language-css">
+
+.video {
+    display: flex;
+    flex-wrap: wrap; /* Add this code to our exisitng code*/
+    justify-content: space-between;
+}
+
+    </code></pre>
+        </div>
+        <p>This simple addition to the class style will allow the website to use vertical space along with horizontal space to space out the video containers evenly. </p>
+        <br>
+        <p>Here is how the website would look with the updated .css file:</p>
+        <iframe src="Example/change-example.html" width="100%" height="400" style="border-radius: 5px; border-color: #00a2ff; display: flex"></iframe>
+        <br>
+        <p>This enhanced layout ensures that your film festival website remains visually appealing, regardless of the number of video containers.</p>
+        <br>
+        <h1>Exploring Flexbox Properties</h1>
+        <p>Flexbox offers a range of properties that allow web developers to fine-tune the layout of their web pages. Let's delve into some of the most essential Flexbox properties and understand how they can be utilized to create responsive and visually appealing designs.</p>
+        <br>
+        <iframe src="Example/Potential/potential.html" width="100%" height="400" style="border-radius: 5px; border-color: #00a2ff; display: flex"></iframe>
+        <br>
+        <p>As demonstarted above there are different uses in flex properties: </p>
+            <ol>
+                <li><strong>flex-grow and flex-shrink:</strong> These properties control how much a flex item can grow or shrink within its container, making the layout responsive.</li>
+                <li><strong>flex-basis:</strong> It defines the initial size of a flex item before it expands or shrinks, allowing control over the initial layout.</li>
+                <li><strong>flex-wrap:</strong> Items can wrap to the next line when there's not enough horizontal space, creating dynamic layouts.</li>
+                <li><strong>flex-direction:</strong> It controls the direction of items within a flex container, useful for different content layouts.</li>
+                <li><strong>flex-flow:</strong> Combines flex-direction and flex-wrap to create versatile item arrangements.</li>
+                <li><strong>align-items:</strong> Aligns items along the cross-axis of the container, useful for centering content.</li>
+                <li><strong>order:</strong> Determines the order in which items appear within the container, allowing for creative layout arrangements.</li>
+            </ol>
+            <p>These flex properties provide web developers with the tools to create responsive, visually appealing layouts and adapt content to different screen sizes.</p>
+            <br>
+            <p>By mastering these properties, you can enhance your web design skills and create layouts that adapt seamlessly to various devices and screen sizes</p>
+        </div>
+        <br>
+                <h1>Web Design with Flexbox</h1>
+                <p>Web design is a dynamic field, constantly evolving to meet the ever-changing needs of users and devices. One of those key tools in a web designer's toolkit is Flexbox, a versatile CSS layout model. Here are some real-world scenarios where Flexbox shines, discuss common challenges designers face when using it, and provide strategies and best practices for creating responsive and accessible web designs.</p>
+                <br>
+                <h2>Real-World Use Cases:</h2>
+                <ul>
+                    <li>Enhancing E-commerce: Online retailers often turn to Flexbox to create visually appealing product listings that adapt seamlessly to various screen sizes.</li>
+                    <li>Streamlined Navigation: Responsive navigation menus, whether horizontal or mega menus, benefit from Flexbox's flexibility in adapting to different device widths.</li>
+                    <li>Consistency in Card-Based Layouts: News portals and social media platforms rely on Flexbox to maintain consistent card structures across various devices.</li>
+                    <li>Pricing Tables Adaptation: Service-oriented websites use Flexbox to align pricing plan features, ensuring readability across diverse screen sizes.</li>
+                </ul>
+                <br>
+                <h2>Challenges and Solutions:</h2>
+                <ul>
+                    <li>Cross-Browser Compatibility: Different browsers may interpret Flexbox properties differently. To address this, thorough testing and vendor prefixes are necessary.</li>
+                    <li>Tackling Complex Nested Layouts: Managing intricate nested layouts requires careful planning and understanding of flex items' order.</li>
+                    <li>Achieving Responsive Alignment: Precise alignment, especially vertically, can be demanding. Flexbox's align-items and align-self properties offer valuable tools for fine-tuning alignment.</li>
+                    <li>Legacy Browser Performance: Older browsers may have limited support for Flexbox, making it essential to provide fallback styles for users on such browsers.</li>
+                    <li>Ensuring Accessibility: Accessibility is crucial. Semantic HTML elements and ARIA attributes enhance the accessibility of Flexbox layouts.</li>
+                </ul>
+                <br>
+                <h2>Strategies for Responsive Design:</h2>
+                <ul>
+                    <li>Employing Media Queries: Use media queries to adjust layouts for different screen sizes.</li>
+                    <li>Scaling Images: CSS can help images scale proportionally with their containers for consistency across devices.</li>
+                    <li>Fluid Typography: Use relative units like percentages for font sizes to maintain text legibility.</li>
+                    <li>Beginning with Mobile-First Design: Start with small screens in mind and progressively enhance layouts for larger screens.</li>
+                    <li>Leveraging Viewport Units: Utilize viewport units to size elements relative to the viewport's dimensions.</li>
+                </ul>
+                <br>
+                <h2>Best Practices:</h2>
+                <ul>
+                    <li>Start Simple: Begin with straightforward layouts and add complexity as needed, avoiding excessive nesting of Flex containers.</li>
+                    <li>Leveraging Flexbox's Strengths: Flexbox excels in one-dimensional layouts, such as rows or columns. For two-dimensional layouts, consider combining it with CSS Grid.</li>
+                    <li>Rigorous Testing: Test Flexbox layouts across devices and browsers, paying attention to older browser support.</li>
+                    <li>Preparing for Fallbacks: Plan for graceful degradation on older browsers or devices with limited support.</li>
+                    <li>Document Your Layout: Comment your CSS code to clarify the purpose of Flexbox properties for developers and future reference.</li>
+                    <li>Prioritize Accessibility: Ensure your layout is accessible by using semantic HTML and following accessibility guidelines.</li>
+                </ul>
+                <br>
+                <div class="browser-support">
+                    <h4>Browser Compatibility:</h4>
+                    <p>Chrome, Firefox, Safari, Edge: Full support.</p>
+                    <p>Internet Explorer: Partial support in IE 10 and 11 with vendor prefixes. Limited support in IE 9 without flex-wrap.</p>
+                </div>
+            <div class="section">
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">MDN Web Docs: CSS Flexible Box Layout</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-Tricks Guide to Flexbox</a></li>
+                    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+                    <li><a href="https://www.smashingmagazine.com/2018/08/flexbox-power-of-order-property/">Smashing Magazine: A Comprehensive Guide to Flexbox Ordering</a></li>
+                    <li><a href="https://webaim.org/intro/">WebAIM: Introduction to Web Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; D.Doss HTML Creations</p>
+    </footer>
+
+</body>
+</html>
